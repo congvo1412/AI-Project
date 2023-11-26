@@ -60,17 +60,24 @@ for key in inputs:
         images.append(base64_image)
         pil_images.append(pil_image)
         
+        
 img_index = meta.index("print_2")
+
+meta_ = meta[img_index]
 img = images[img_index]
 pil_img = pil_images[img_index]
 
 images.insert(1, img)
 pil_images.insert(1, pil_img)
+meta.insert(1, meta_)
 
 
 img_index = meta.index("plaid_3")
+meta_ = meta[img_index]
 img = images[img_index]
 pil_img = pil_images[img_index]
 
 images.insert(1, img)
 pil_images.insert(1, pil_img)
+meta.insert(1, meta_)
+
