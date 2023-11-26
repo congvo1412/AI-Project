@@ -44,7 +44,7 @@ def handle_try_on_click(upload, jacket, pant):
 
 def layer_try_on_multi(base_model, submit):
     with st.container():
-        dummt, right, left = st.columns([2, 9, 3])
+        _, right, _ = st.columns([2, 9, 3])
 
         with right:
             base, select = st.columns([6, 3])

@@ -29,6 +29,7 @@ def local_css(file_name):
 
 
 def main():
+    local_css("style.css")
     with st.sidebar:
         feature = st.selectbox(
             "Select feature",
