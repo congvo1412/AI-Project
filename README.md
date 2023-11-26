@@ -31,7 +31,7 @@
 ![code logic](./assets/code-logic.png)
 
 
-## Customble style
+## Customizable style
 
 - Size of image selector and result Image:
 ```py
