@@ -76,3 +76,15 @@ docker run -p 8501:8501 tsdocode/try-on
 ```
 http://localhost:8501
 ```
+
+
+## Dev run
+1. Create a python environments
+2. Install deps
+```
+pip install -r requirements.txt
+```
+3. Run app
+```
+streamlit run app.py
+```
