@@ -52,30 +52,6 @@ textColor="#262730"
 font="sans serif"
 ```
 
-## Build and run with Docker
-- What is Docker?
-In short it a tool that help pack the application and can run on any Docker installed machine
-- How to build ?
-On the root path run
-```
-docker build try-on .
-```
-- When I need build again?
-
-Whenevenr you change something in the source code
-
-- How to run?
-```
-docker run -p 8501:8501 try-on
-```
-You can also run a pre-builded image using
-```
-docker run -p 8501:8501 tsdocode/try-on
-```
-- How to see the web?
-```
-http://localhost:8501
-```
 
 
 ## Dev run
@@ -86,5 +62,5 @@ pip install -r requirements.txt
 ```
 3. Run app
 ```
-streamlit run app.py
+python3 -m streamlit run app.py
 ```
