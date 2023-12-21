@@ -41,7 +41,7 @@ def main():
             ),
         )
 
-        base_model = st.file_uploader("Upload ảnh mẫu")
+        base_model = st.file_uploader("Upload model photo")
 
         if base_model:
             filename = base_model.name.split(".")[0]

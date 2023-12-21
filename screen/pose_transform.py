@@ -14,7 +14,6 @@ from components import image_selector
 
 from constants import RESULT_IMAGE_SIZE
 
-
 def handle_try_on_click(upload, select):
     upload_name = upload.name.split(".")[0]
     class_id, index = upload_name.split("_")
@@ -43,20 +42,20 @@ def pose_transform(base_model, submit):
             base, select = st.columns([6, 3])
 
             with base:
-                st.subheader("Chọn tư thế")
+                st.subheader("Choose a pose")
                 jacket = image_selector(
                     images, "jacket", {"width": "90%", "left": "30px"}
                 )
 
             with select:
                 if jacket:
-                    st.subheader("Tư thế đã chọn")
-                    image_selector([images[jacket]], "pant_r")
+                    st.subheader("Selected pose")
+                    image_selector([images[jacket]], "pant_r", {"border": "solid 3px #FFD700", "justify-content": "center"})
 
     _, right, _ = st.columns([2, 9, 3])
 
     with right:
-        st.subheader("Kết quả")
+        st.subheader("Result")
 
         if submit:
             if base_model:
@@ -65,4 +64,4 @@ def pose_transform(base_model, submit):
                 st.image(prediction, width=RESULT_IMAGE_SIZE)
 
             else:
-                st.error("Vui lòng upload ảnh người mẫu")
+                st.error("Please upload model photos")

@@ -50,31 +50,31 @@ def layer_try_on_multi(base_model, submit):
             base, select = st.columns([6, 3])
 
             with base:
-                st.subheader("Chọn layer 1")
+                st.subheader("Select layer 1")
                 jacket = image_selector(
                     images, "jacket", {"width": "90%", "left": "30px"}
                 )
 
-                st.subheader("Chọn layer 2")
+                st.subheader("Select layer 2")
                 pant = image_selector(images, "pant", 
                                       {"width": "90%", "left": "30px"}
                                       )
 
             with select:
                 if jacket:
-                    st.subheader("Layer 1 đã chọn")
-                    image_selector([images[jacket]], "jacket_r")
+                    st.subheader("Layer 1 is selected")
+                    image_selector([images[jacket]], "jacket_r", {"border": "solid 3px #FFD700", "justify-content": "center"})
 
                 st.text("")
 
                 if pant:
-                    st.subheader("Layer 2 đã chọn")
-                    image_selector([images[pant]], "pant_r")
+                    st.subheader("Layer 2 is selected")
+                    image_selector([images[pant]], "pant_r",{"border": "solid 3px #FFD700", "justify-content": "center"})
 
     _, right, _ = st.columns([2, 9, 3])
 
     with right:
-        st.subheader("Kết quả")
+        st.subheader("Result")
 
         if submit:
             if base_model:
@@ -82,4 +82,4 @@ def layer_try_on_multi(base_model, submit):
 
                 st.image(prediction, width=RESULT_IMAGE_SIZE)
             else:
-                st.error("Vui lòng upload ảnh người mẫu")
+                st.error("Please upload model photos")

@@ -43,20 +43,20 @@ def layer_try_on(base_model, submit):
             base, select = st.columns([6, 3])
 
             with base:
-                st.subheader("Chọn layer")
+                st.subheader("Select layer")
                 jacket = image_selector(
                     images, "jacket", {"width": "90%", "left": "30px"}
                 )
 
             with select:
                 if jacket:
-                    st.subheader("Tư thế đã chọn")
-                    image_selector([images[jacket]], "pant_r")
+                    st.subheader("Layer is selected")
+                    image_selector([images[jacket]], "pant_r",{"border": "solid 3px #FFD700", "justify-content": "center"})
 
     dummt, right, left = st.columns([2, 9, 3])
 
     with right:
-        st.subheader("Kết quả")
+        st.subheader("Result")
 
         if submit:
             if base_model:
@@ -65,4 +65,4 @@ def layer_try_on(base_model, submit):
                 st.image(prediction, width=RESULT_IMAGE_SIZE)
 
             else:
-                st.error("Vui lòng upload ảnh người mẫu")
+                st.error("Please upload model photos")
