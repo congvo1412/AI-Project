@@ -26,10 +26,6 @@
 └── style.css                       # Some custom css
 ```
 
-## Source code logic
-
-![code logic](./assets/code-logic.png)
-
 
 ## Customizable style
 
@@ -64,7 +60,7 @@ docker build try-on .
 
 Whenevenr you change something in the source code
 
--Run Docker
+- Run Docker
 ```
 docker run -p 8501:8501 try-on
 ```
