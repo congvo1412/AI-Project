@@ -84,5 +84,6 @@ pip install -r requirements.txt
 ```
 streamlit run app.py
 ```
-##Test product
-[Test Demo](https://drive.google.com/drive/folders/1c3ZHCWtxdqi0MGrD4kc6Fw1qhVsDsOHO?usp=sharing)
+## Test product
+You can test the code with the image files provided below
+[IMGAGES](https://drive.google.com/drive/folders/1c3ZHCWtxdqi0MGrD4kc6Fw1qhVsDsOHO?usp=sharing)
